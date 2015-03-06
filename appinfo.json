@@ -1,0 +1,35 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "James Downs",
+    "longName": "Apple",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/logobw.png",
+                "menuIcon": true,
+                "name": "LOGO",
+                "type": "png"
+            },
+            {
+                "file": "images/apple.png",
+                "name": "BACKGROUND",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "Apple",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "1eddb758-5e14-47fe-93e4-70a51da9b6fe",
+    "versionCode": 1,
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
