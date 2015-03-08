@@ -4,7 +4,7 @@
         ""
     ],
     "companyName": "James Downs",
-    "longName": "Apple",
+    "longName": "OG Apple",
     "projectType": "native",
     "resources": {
         "media": [
@@ -22,8 +22,9 @@
         ]
     },
     "sdkVersion": "3",
-    "shortName": "Apple",
+    "shortName": "OG Apple",
     "targetPlatforms": [
+        "aplite",
         "basalt"
     ],
     "uuid": "1eddb758-5e14-47fe-93e4-70a51da9b6fe",
