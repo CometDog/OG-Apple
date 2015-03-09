@@ -41,6 +41,7 @@ static void hands_update_proc(Layer *layer, GContext *ctx) {
   #endif
   // Define the path that the hour hand will follow
   gpath_rotate_to(s_hour_arrow, (TRIG_MAX_ANGLE * (((t->tm_hour % 12) * 6) + (t->tm_min / 10))) / (12 * 6));
+  // Fill the hand with the above color
   gpath_draw_filled(ctx, s_hour_arrow);
   // Draw outline if black and white
   #ifdef PBL_COLOR
@@ -55,6 +56,7 @@ static void hands_update_proc(Layer *layer, GContext *ctx) {
   #endif
   // Define the path that the minute hand will follow
   gpath_rotate_to(s_minute_arrow, TRIG_MAX_ANGLE * t->tm_min / 60);
+  // Fill the hand with the above color
   gpath_draw_filled(ctx, s_minute_arrow);
   // Draw outline if black and white
   #ifdef PBL_COLOR
@@ -70,6 +72,7 @@ static void hands_update_proc(Layer *layer, GContext *ctx) {
   #endif
   // Define the path that the minute hand will follow
   gpath_rotate_to(s_second_arrow, (TRIG_MAX_ANGLE * t->tm_sec / 60));
+  // Fill the hand with the above color
   gpath_draw_filled(ctx, s_second_arrow);
 
   // Center dot
@@ -93,7 +96,7 @@ static void window_load(Window *s_main_window) {
   Layer *window_layer = window_get_root_layer(s_main_window);
   GRect bounds = layer_get_bounds(window_layer);
 
-  // Create the simple single color backgroud behind the face layer. Then apply it to the window layer
+  // Create the simple single color background behind the face layer. Then apply it to the window layer
   s_solid_bg_layer = layer_create(bounds);
   layer_set_update_proc(s_solid_bg_layer, bg_update_proc);
   layer_add_child(window_layer, s_solid_bg_layer);
@@ -136,7 +139,7 @@ static void init() {
   });
   window_stack_push(s_main_window, true);
 
-  // Initialize the paths of the hands
+  // Initialize the paths of the hands from the main.h file
   s_minute_arrow = gpath_create(&MINUTE_HAND_POINTS);
   s_hour_arrow = gpath_create(&HOUR_HAND_POINTS);
   s_second_arrow = gpath_create(&SECOND_HAND_POINTS);
