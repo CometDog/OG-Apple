@@ -133,10 +133,12 @@ static void window_unload(Window *s_main_window) {
 // Initialize the main window
 static void init() {
   s_main_window = window_create();
+  // Set handlers to manage the window
   window_set_window_handlers(s_main_window, (WindowHandlers) {
     .load = window_load,
     .unload = window_unload,
   });
+  // Show the window. Animated = true
   window_stack_push(s_main_window, true);
 
   // Initialize the paths of the hands from the main.h file
