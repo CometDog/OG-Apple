@@ -1,7 +1,12 @@
   /*
-  In this file, you map each point of the hand. A good way to do this is to draw the file in something like GIMP or Photoshop. Center the newly drawn hand in a 144x168 size file and then figure out the coordinates of the points by scrolling your cursor over top each point you want mapped. Then it is as simple as subtracting 72x84 from the points you just mapped to get the coordinates here. You can find that easily by saving the coordinates in a .csv file, opening it in Excel and using the following formula to get the points:
+  In this file, you map each point of the hand. A good way to do this is to draw the file in something like GIMP or 
+  Photoshop. Center the newly drawn hand in a 144x168 size file and then figure out the coordinates of the points 
+  by scrolling your cursor over top each point you want mapped. Then it is as simple as subtracting 72x84 from the 
+  points you just mapped to get the coordinates here. You can find that easily by saving the coordinates in a .csv 
+  file, opening it in Excel and using the following formula to get the points:
     =CONCATENATE("{ ", A1 - 72,", ", B1 - 84, " },")
-  Then you can just copy and paste the coordinates from Excel and you will get something like what follows. It does not matter where you start or stop as long as you map all the points you map (don't map points twice)
+  Then you can just copy and paste the coordinates from Excel and you will get something like what follows. It does
+  not matter where you start or stop as long as you map all the points you map (don't map points twice)
 */
 
 #pragma once
